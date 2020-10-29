@@ -27,7 +27,7 @@ def my_matrix_sum(m1, m2):
 
 
 # generowanie macierzy m wierszy na n kolumn, m = n = 128
-m = n = 10
+m = n = 128
 matrix1 = []
 matrix2 = []
 for i in range(m):
@@ -39,4 +39,4 @@ for i in range(m):
 
 # test
 matrix_sum = my_matrix_sum(matrix1, matrix2)
-# wyniki mozna wyswietlic w scientific mode 
+# wyniki mozna wyswietlic w scientific mode
