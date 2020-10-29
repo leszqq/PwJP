@@ -16,10 +16,6 @@ def my_matrix_sum(m1, m2):
             m_s.append([])
             for n in range(c_cnt):
                 m_s[m].append(m1[m][n] + m2[m][n])
-
-        #for m in range(v_cnt):
-        #    for n in range(c_cnt):
-        #        m_s[m][n] = m_s[m][n] + m2[m][n]
         return m_s
     else:
         print("Niezgodne wymiary macierzy")
