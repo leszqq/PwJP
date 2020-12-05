@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <user id = "0">
+		<name>npcName</name>
+		<email>rndMail@mail.com</email>
+		<gender>male</gender>
+		<userType>1</userType>
+		<creditBalance>127</creditBalance>
+		<cash>0</cash>
+    </user>
+
+    <user id = "1">
+		<name>name1</name>
+		<email>email@mail.com</email>
+		<gender>female</gender>
+		<userType>3</userType>
+		<creditBalance>127</creditBalance>
+		<cash>0</cash>
+    </user>
+
+</root>
