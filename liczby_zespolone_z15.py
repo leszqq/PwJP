@@ -6,20 +6,20 @@ import math as m
 
 
 class MyComplex:
-    def __init__(self, real, imag):
+    def __init__(self, real=0, imag=0):
         self.r = real
         self.i = imag
 
-    def abs(self):
+    def mod(self):
         return MyComplex(m.sqrt(self.r ** 2 + self.i ** 2), 0)
 
-    def phase(self):
+    def p(self):
         if self.r != 0:
-            return MyComplex(m.atan2(self.i / self.r), 0)
+            return MyComplex(m.atan2(self.i, self.r,), 0)
         else:
             return MyComplex(0, 0)
 
-    def conjugate(self):
+    def conj(self):
         return MyComplex(self.r, -self.i)
 
     def __add__(self, other):
