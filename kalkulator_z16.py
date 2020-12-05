@@ -39,6 +39,8 @@ reg = re.compile(r"(\d+(?:\.\d+)?)|(j\d+(?:\.\d+)?)|(mod)|(p)|(conj)")
 # print(1 - complex(0, 1) + 3 + 5/3 + complex(0, 1) * cmath.phase(1 - 4 / complex(0, 1)))
 
 while True:
-    print(">>")
-    print(eval(reg.sub(my_repl, input())))
-    
+    try:
+        print(">>")
+        print(eval(reg.sub(my_repl, input())))
+    except Exception:
+        print("Błąd składni.")
