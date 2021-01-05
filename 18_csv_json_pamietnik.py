@@ -51,7 +51,7 @@ def delete_memory(name):
         with open(r"csv_json_pamietnik_temp.csv", 'w', newline='') as fd:
             writer = csv.writer(fd, delimiter=';')
             for row in l:
-                if (row[0] != name):
+                if row[0] != name:
                     writer.writerow(row)
     except Exception:
         print("nieznany błąd")

@@ -6,7 +6,7 @@
 # p( ) - faza
 # conj( ) - sprzężenie
 
-import liczby_zespolone_z15 as c
+import z15_liczby_zespolone as c
 import cmath  # dla testów
 import re
 
