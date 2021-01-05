@@ -10,6 +10,7 @@ from itertools import repeat
 
 NUM_OF_BARS = 30
 
+
 # funkcja do obliczania histogramu
 def my_hist(arr, minim, maxim, num_of_groups=10):
     hist_arr = np.ndarray(num_of_groups)
@@ -26,7 +27,8 @@ def my_hist_multiprocess(arr, num_of_groups=10):
     minim = min(arr)
     maxim = max(arr)
     pool = mp.Pool()
-    res = sum(pool.starmap(my_hist, zip(np.array_split(arr, m.ceil(len(arr)/4)), repeat(minim), repeat(maxim), repeat(num_of_groups))))
+    res = sum(pool.starmap(my_hist, zip(np.array_split(arr, m.ceil(len(arr) / 4)), repeat(minim), repeat(maxim),
+                                        repeat(num_of_groups))))
     res[0] += 1
     res[len(res) - 1] -= 1
     return res
@@ -46,9 +48,9 @@ if __name__ == '__main__':
     plt.figure(2)
     plt.grid(True)
     t = time.time()
-    plt.bar(np.linspace( min(r_arr), max(r_arr) - (max(r_arr) - min(r_arr))/NUM_OF_BARS, len(my_h)),
+    plt.bar(np.linspace(min(r_arr), max(r_arr) - (max(r_arr) - min(r_arr)) / NUM_OF_BARS, len(my_h)),
             my_h,
-            width=(max(r_arr) - min(r_arr))/NUM_OF_BARS,
+            width=(max(r_arr) - min(r_arr)) / NUM_OF_BARS,
             color='g',
             align='edge')
     plt.title("Histogram implementowany, czas obliczeń: " + str(time.time() - t) + " [s]")
